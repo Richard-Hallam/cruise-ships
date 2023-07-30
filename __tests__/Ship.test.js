@@ -15,3 +15,14 @@ describe('Ship', () => {
         expect(new Ship('testShip').startingPort).toEqual('Mousehole');
     })
 })
+
+describe('Ship.setSail()', () => {
+
+    it('can set sail', () => {
+        const ship = new Ship('testShip', 'dover');
+
+        ship.setSail();
+
+        expect(ship.startingPort).toBeFalsy();
+    })
+})
