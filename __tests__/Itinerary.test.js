@@ -1,14 +1,15 @@
 /*globals describe it expect*/
 const Itinerary = require('../src/Itinerary.js');
+const Port = require('../src/Port.js');
 
 describe('Itinerary', () => {
-    it('checks Itinerary is an object', () => {
-        expect(new Itinerary()).toBeInstanceOf(Object);
+    it('can have ports', () => {
+        const mousehole = new Port('Mousehole');
+        const newlyn = new Port('Newlyn');
+
+        const itinerary = new Itinerary([mousehole, newlyn]);
+
+        expect(itinerary.ports).toEqual([mousehole, newlyn]);
     })
 
-    it('checks Itinerary takes arguments',() => {
-        itinerary = new Itinerary('tp1', 'tp2', 'tp3');
-        
-        expect(itinerary.port1).toEqual('tp1');
-    })
 })

@@ -3,8 +3,10 @@ function Ship(shipName, port){
     this.passengers = 0;
     this.currentPort = port;
     this.startingPort = port;
+    this.previousPort = '';
 
     this.setSail = function(){
+        this.previousPort = this.currentPort;
         this.currentPort = '';
     }
 

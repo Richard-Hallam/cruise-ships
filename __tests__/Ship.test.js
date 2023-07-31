@@ -33,6 +33,7 @@ describe('Ship.setSail()', () => {
         ship.setSail();
 
         expect(ship.currentPort).toBeFalsy();
+        expect(ship.previousPort).toBe(port)
     })
 })
 
