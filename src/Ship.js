@@ -1,7 +1,7 @@
-function Ship(shipName){
+function Ship(shipName, port){
     this.name = shipName;
     this.passengers = 0;
-    this.startingPort = 'Mousehole';
+    this.currentPort = port;
 
     this.setSail = function(){
         this.startingPort = '';
