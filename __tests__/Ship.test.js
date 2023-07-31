@@ -32,6 +32,20 @@ describe('Ship.setSail()', () => {
 
         ship.setSail();
 
-        expect(ship.startingPort).toBeFalsy();
+        expect(ship.currentPort).toBeFalsy();
+    })
+})
+
+describe('Ship.dock()', () => {
+
+    it('Can dock at a different port', () => {
+        const port = new Port('Mousehole');
+        const port2 = new Port('Newlyn');
+        const ship = new Ship('testShip', port);
+
+        ship.setSail();
+        ship.dock(port2);
+
+        expect(ship.currentPort).toBe(port2);
     })
 })
