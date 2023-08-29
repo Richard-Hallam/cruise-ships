@@ -4,6 +4,13 @@ const Port = require('../src/Port.js');
 const Itinerary = require('../src/Itinerary.js');
 
 describe('Ship', () => {
+    beforeAll(() => {
+        const mousehole = new Port('Mousehole');
+        const newlyn = new Port('Newylyn');
+        const itinerary = new Itinerary([mousehole, newlyn]);
+        const ship = new Ship(itinerary);
+        console.log('.')
+    }),
     
     it('can be instantiated', () => {
         const port = new Port('Mousehole');
