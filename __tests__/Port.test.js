@@ -11,10 +11,12 @@ describe('Port', () => {
         let kipper;
         beforeEach(() =>{
             port = new Port('Mousehole');
-            itinerary = new Itinerary(port);
-            ship = itinerary;
-            scilionian = {};
-            kipper = {};
+            //itinerary = new Itinerary(port);
+            itninerary = jest.fn();
+            //ship = itinerary;
+            ship = jest.fn();
+            scilionian = jest.fn();
+            kipper = jest.fn();
         })
         it('Checks Port is an object', () => {
             expect(new Port()).toBeInstanceOf(Object);
