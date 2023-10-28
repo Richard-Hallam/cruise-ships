@@ -1,6 +1,6 @@
 /*globals describe it expect*/
 const Itinerary = require('../src/Itinerary.js');
-const Port = require('../src/Port.js');
+
 
 describe('Itinerary', () => {
     it('can have ports', () => {
