@@ -1,10 +1,6 @@
 /*globals describe it expect*/
 const Ship = require('../src/Ship.js');
 
-
-    
-
-
 describe('Ship', () => {
     describe('with ports and itinarary', () => {
         let mousehole

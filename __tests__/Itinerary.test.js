@@ -1,7 +1,6 @@
 /*globals describe it expect*/
 const Itinerary = require('../src/Itinerary.js');
 
-
 describe('Itinerary', () => {
     it('can have ports', () => {
         const mousehole = jest.fn();
