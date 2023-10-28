@@ -33,6 +33,9 @@ describe('Ship', () => {
         it('can be instantiated', () => {
             expect(ship).toBeInstanceOf(Object);
         });
+        it('gets added to port on instantiation', () =>{
+            expect(mousehole.addShip).toHaveBeenCalledWith(ship);
+        })
         
     
     }) 
@@ -68,7 +71,7 @@ describe('Ship.setSail()', () => {
 
         expect(ship.currentPort).toBeFalsy();
         expect(ship.previousPort).toBe(mousehole);
-        expect(mousehole.ships).not.toContain(ship);
+        expect(mousehole.removeShip).toHaveBeenCalledWith(ship);
     });
 
     it('Ship can\'t set sail further than its itinerary', () => {
